@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.podcastapp.views.viewpods.PodcastListViewpod
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblUpNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_up_next"
+        style="@style/textHeader"
+        android:layout_marginStart="@dimen/margin_medium_2"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnUpNext"
+        android:layout_width="@dimen/width_logo"
+        android:layout_height="@dimen/width_logo"
+        android:src="@drawable/ic_two_dots"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/margin_medium_2"
+        android:layout_alignTop="@id/lblUpNext"
+        android:layout_marginEnd="@dimen/margin_medium_2"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUpNextList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_podcast"
+        android:layout_below="@id/lblUpNext"
+        android:layout_alignStart="@id/lblUpNext"
+        android:layout_alignEnd="@id/btnUpNext" />
+
+</com.example.podcastapp.views.viewpods.PodcastListViewpod>

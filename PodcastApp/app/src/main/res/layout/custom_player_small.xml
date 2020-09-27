@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rc_purple_bg"
+    android:padding="@dimen/margin_medium_3">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/exo_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="05:15"
+        android:textSize="@dimen/text_regular"
+        android:textColor="@color/colorProgressbar"/>
+
+    <ProgressBar
+        android:id="@+id/exo_progress_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:max="100"
+        android:progress="80"
+        android:layout_toRightOf="@id/exo_position"
+        android:layout_toLeftOf="@id/exo_duration"
+        android:layout_alignBottom="@id/exo_position"
+        android:layout_marginLeft="@dimen/margin_medium_3"
+        android:layout_marginRight="@dimen/margin_medium_3"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/exo_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18:51"
+        android:textSize="@dimen/text_regular"
+        android:textColor="@color/colorProgressbar"
+        android:layout_alignBottom="@id/exo_position"
+        android:layout_alignParentEnd="true"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSpeed"
+        android:layout_width="@dimen/width_logo"
+        android:layout_height="@dimen/width_logo"
+        android:text="@string/speed_1x"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_regular_3x"
+        android:textStyle="bold"
+        android:layout_below="@id/exo_position"
+        android:gravity="left|center_vertical"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:paddingLeft="@dimen/margin_medium"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/exo_rew"
+        android:layout_width="@dimen/width_logo"
+        android:layout_height="@dimen/width_logo"
+        android:src="@drawable/ic_backward_15"
+        android:layout_alignTop="@id/tvSpeed"
+        android:layout_toRightOf="@id/tvSpeed"
+        android:padding="@dimen/margin_medium"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/exo_play"
+        android:layout_width="@dimen/width_logo"
+        android:layout_height="@dimen/width_logo"
+        android:src="@drawable/ic_play_arrow_24"
+        android:background="@drawable/circle_transparent_bg"
+        android:layout_alignTop="@id/tvSpeed"
+        android:padding="@dimen/margin_medium_2"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/exo_pause"
+        android:layout_width="@dimen/width_logo"
+        android:layout_height="@dimen/width_logo"
+        android:src="@drawable/ic_pause"
+        android:background="@drawable/circle_transparent_bg"
+        android:layout_alignTop="@id/tvSpeed"
+        android:padding="@dimen/margin_medium_2"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/exo_ffwd"
+        android:layout_width="@dimen/width_logo"
+        android:layout_height="@dimen/width_logo"
+        android:src="@drawable/ic_forward_30_24dp"
+        android:layout_alignTop="@id/tvSpeed"
+        android:layout_toLeftOf="@id/tvSleep"
+        android:padding="@dimen/margin_medium"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSleep"
+        android:layout_width="@dimen/width_logo"
+        android:layout_height="@dimen/width_logo"
+        android:text="@string/sleep_zz"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_regular_3x"
+        android:textStyle="bold"
+        android:layout_alignTop="@id/tvSpeed"
+        android:gravity="right|center_vertical"
+        android:layout_alignParentEnd="true"
+        android:paddingRight="@dimen/margin_medium"/>
+
+
+</RelativeLayout>

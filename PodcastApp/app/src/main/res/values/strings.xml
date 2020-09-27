@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">PodcastApp</string>
+    <string name="lbl_home">Home</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lbl_podcast">Podcast</string>
+    <string name="speed_1x">1x</string>
+    <string name="sleep_zz">Zz</string>
+    <string name="lbl_up_next">Up Next</string>
+    <string name="lbl_your_shows">Your Shows</string>
+    <string name="lbl_welcome">Welcome</string>
+    <string name="lbl_welcome_description">It looks like you aren\'t enrolled in any podcasts, but it\'s easy to get started.</string>
+    <string name="btn_find_new">find something new</string>
+    <string name="btn_reload">Reload</string>
+    <string name="tv_details_description">Take your carrer to the next level by showing your prospective clients just how awesome you ar Take your carrer to the next level by showing your prospective clients just how awesome you ar Take your carrer to the next level by showing your prospective clients just how awesome you ar Take your carrer to the next level by showing your prospective clients just how awesome you ar</string>
+    <string name="media_url_mp3">https://storage.googleapis.com/exoplayer-test-media-0/Jazz_In_Paris.mp3</string>
+    <string name="hello">hello</string>
+</resources>

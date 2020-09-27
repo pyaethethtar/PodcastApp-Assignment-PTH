@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivWelcome"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:src="@drawable/bee_png"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_welcome"
+        style="@style/textHeader"
+        android:layout_below="@id/ivWelcome"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblWelcomeDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_welcome_description"
+        android:textSize="@dimen/text_regular_2x"
+        android:textColor="@color/textcolorPrimary"
+        android:layout_below="@id/lblWelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginLeft="@dimen/margin_xxlarge"
+        android:layout_marginRight="@dimen/margin_xxlarge"
+        android:layout_marginBottom="@dimen/margin_medium_3"
+        android:textAlignment="center"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnFindNew"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_button"
+        android:text="@string/btn_find_new"
+        android:textColor="@color/textcolorPrimary"
+        android:textSize="@dimen/text_regular_2x"
+        android:background="@drawable/rc_blue_bg"
+        android:layout_below="@id/lblWelcomeDescription"
+        android:layout_marginTop="@dimen/margin_medium_2"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnReload"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_button"
+        android:text="@string/btn_reload"
+        android:textColor="@color/textcolorPrimary"
+        android:textSize="@dimen/text_regular_2x"
+        android:background="@drawable/rc_yellow_bg"
+        android:layout_below="@id/btnFindNew"
+        android:layout_marginTop="@dimen/margin_medium_2"/>
+
+
+</RelativeLayout>

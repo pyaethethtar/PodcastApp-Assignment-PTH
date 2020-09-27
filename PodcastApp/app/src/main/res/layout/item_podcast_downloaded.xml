@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/margin_xlarge">
+
+    <com.example.podcastapp.views.components.RoundedCornerImageView
+        android:id="@+id/ivPodcast"
+        android:layout_width="110dp"
+        android:layout_height="140dp"
+        android:src="@drawable/placeholder"
+        android:scaleType="fitXY"
+        app:cornerRadius="@dimen/margin_xlarge"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Art A Design"
+        android:textAllCaps="true"
+        android:background="@drawable/rc_yellow_bg"
+        android:textColor="@color/textcolorSecondary"
+        android:textSize="@dimen/text_small"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/ivPodcast"
+        android:layout_marginLeft="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:paddingTop="@dimen/margin_small"
+        android:paddingBottom="@dimen/margin_small"
+        android:paddingLeft="@dimen/margin_medium_2"
+        android:paddingRight="@dimen/margin_medium_2"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPodcastTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Women n Tech Podcast, hosted by Estee Devara"
+        android:textColor="@color/textcolorPrimary"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold"
+        android:maxLines="2"
+        android:layout_alignStart="@id/tvCategory"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_below="@id/tvCategory"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPodcastDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The #womenintech Show is a great women and"
+        android:textColor="@color/textcolorTertary"
+        android:textSize="@dimen/text_regular"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_alignStart="@+id/tvCategory"
+        android:layout_alignEnd="@id/tvPodcastTitle"
+        android:layout_below="@id/tvPodcastTitle"
+        android:layout_marginTop="@dimen/margin_medium"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/textcolorTertary"
+        android:layout_below="@id/ivPodcast"
+        android:layout_marginTop="@dimen/margin_large"/>
+
+
+
+</RelativeLayout>

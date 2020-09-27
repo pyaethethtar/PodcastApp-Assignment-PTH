@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+//    compileOptions {
+//        sourceCompatibility = JavaVersion.VERSION_1_8
+//        targetCompatibility = JavaVersion.VERSION_1_8
+//    }
+//    kotlinOptions {
+//        jvmTarget = JavaVersion.VERSION_1_8
+//    }
+    compileSdkVersion 29
+
+    defaultConfig {
+        applicationId "com.example.podcastapp"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/gradle/incremental.annotation.processors'
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    //implementation project(":shared")
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    implementation rootProject.ext.libraries.core
+    implementation rootProject.ext.libraries.appcompat
+    implementation rootProject.ext.libraries.constraintLayout
+    implementation rootProject.ext.libraries.legacy
+    implementation rootProject.ext.libraries.material
+    implementation rootProject.ext.libraries.glide
+    implementation rootProject.ext.libraries.gson
+    implementation rootProject.ext.libraries.recyclerview
+    implementation rootProject.ext.libraries.retrofit
+    implementation rootProject.ext.libraries.converterGson
+    implementation rootProject.ext.libraries.adapterRxJava2
+    kapt rootProject.ext.libraries.annotationProcessor
+    implementation rootProject.ext.libraries.liveData
+    implementation rootProject.ext.libraries.lifecycleExtension
+    kapt rootProject.ext.libraries.lifecycleCompiler
+    implementation rootProject.ext.libraries.rxKotlin
+    implementation rootProject.ext.libraries.rxAndroid
+    implementation rootProject.ext.libraries.roomRuntime
+    kapt rootProject.ext.libraries.roomCompiler
+
+    implementation 'com.google.android.exoplayer:exoplayer:2.10.4'
+
+
+    testImplementation rootProject.ext.libraries.junit
+    androidTestImplementation rootProject.ext.libraries.androidJunit
+    androidTestImplementation rootProject.ext.libraries.espresso
+
+}

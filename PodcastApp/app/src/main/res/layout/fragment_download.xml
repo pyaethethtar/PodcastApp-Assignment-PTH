@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DownloadFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back_24"
+        android:padding="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/margin_medium_3"/>
+
+
+    <TextView
+        android:id="@+id/lblYourShows"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_your_shows"
+        style="@style/textHeader"
+        android:layout_toRightOf="@id/btnBack"
+        android:layout_alignTop="@id/btnBack"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnYourShows"
+        android:layout_width="@dimen/width_logo"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_two_dots"
+        android:layout_alignParentEnd="true"
+        android:paddingLeft="@dimen/margin_medium_2"
+        android:paddingRight="@dimen/margin_medium_2"
+        android:layout_marginRight="@dimen/margin_medium_3"
+        android:layout_alignTop="@id/btnBack"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDownloadedShows"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnBack"
+        android:layout_alignStart="@id/btnBack"
+        android:layout_alignEnd="@id/btnYourShows"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:visibility="invisible"/>
+
+<!--    <include-->
+<!--        layout="@layout/viewpod_podcast_list"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/btnBack"-->
+<!--        android:layout_alignLeft="@id/btnBack"-->
+<!--        android:layout_alignRight="@id/btnYourShows"-->
+<!--        android:visibility="invisible"/>-->
+
+    <include
+        android:id="@+id/vpEmpty"
+        layout="@layout/viewpod_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnBack"
+        android:layout_alignStart="@id/btnBack"
+        android:layout_alignEnd="@id/btnYourShows"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:visibility="visible"/>
+
+</RelativeLayout>
