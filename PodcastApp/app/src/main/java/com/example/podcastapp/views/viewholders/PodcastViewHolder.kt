@@ -4,15 +4,15 @@ import android.view.View
 import com.bumptech.glide.Glide
 import com.example.podcastapp.data.vos.PodcastVO
 import com.example.podcastapp.delegates.PodcastDelegate
-import kotlinx.android.synthetic.main.activity_details.view.*
+import com.example.shared.BaseViewHolder
 import kotlinx.android.synthetic.main.item_podcast.view.*
-import kotlinx.android.synthetic.main.viewpod_player.view.*
 
 class PodcastViewHolder(itemView: View, var delegate: PodcastDelegate) : BaseViewHolder<PodcastVO>(itemView) {
 
     var podcastId : String = ""
     var hour : Int = 0
     var min : Int = 0
+    var sec : Int = 0
 
     init {
         itemView.setOnClickListener {
@@ -26,13 +26,14 @@ class PodcastViewHolder(itemView: View, var delegate: PodcastDelegate) : BaseVie
         Glide.with(itemView.context).load(data.image).into(itemView.ivPodcast)
         itemView.tvPodcastTitle.text = data.title
 
-        hour = data.audio_length.div(60)
-        min = data.audio_length.rem(60)
+        sec = data.audio_length.rem(60)
+        min = data.audio_length.div(60)
+        hour = min.div(60)
         if(hour<1){
-            itemView.tvPodcastTime.text = min.toString()+" min"
+            itemView.tvPodcastTime.text = min.toString()+"min "+sec.toString()+"sec"
         }
         else{
-            itemView.tvPodcastTime.text = hour.toString()+"h "+min.toString()+"min left"
+            itemView.tvPodcastTime.text = hour.toString()+"h "+min.toString()+"min"
         }
 
 

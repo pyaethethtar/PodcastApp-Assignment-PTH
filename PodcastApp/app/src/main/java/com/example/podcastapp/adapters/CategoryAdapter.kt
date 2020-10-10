@@ -4,9 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.podcastapp.R
 import com.example.podcastapp.data.vos.GenresVO
-import com.example.podcastapp.views.viewholders.BaseViewHolder
+import com.example.shared.BaseViewHolder
 import com.example.podcastapp.views.viewholders.CategoryViewHolder
-import com.example.podcastapp.views.viewholders.PodcastViewHolder
+import com.example.shared.BaseAdapter
 
 class CategoryAdapter : BaseAdapter<BaseViewHolder<GenresVO>, GenresVO>() {
 

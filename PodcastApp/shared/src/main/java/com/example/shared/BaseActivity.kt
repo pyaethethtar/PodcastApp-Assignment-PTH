@@ -1,4 +1,4 @@
-package com.example.podcastapp.activities
+package com.example.shared
 
 import android.os.Bundle
 import android.os.PersistableBundle

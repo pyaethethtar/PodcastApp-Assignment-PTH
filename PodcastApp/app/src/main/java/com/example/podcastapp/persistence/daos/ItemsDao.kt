@@ -12,6 +12,9 @@ interface ItemsDao {
     @Query("SELECT * FROM items")
     fun getAllItems() : LiveData<List<ItemVO>>
 
+    @Query("SELECT * FROM items ORDER BY RANDOM() LIMIT 1 ")
+    fun getRandomPodcast() : LiveData<ItemVO>
+
     @Query("SELECT * FROM items WHERE id = :id")
     fun getItemById(id: String): LiveData<ItemVO>
 

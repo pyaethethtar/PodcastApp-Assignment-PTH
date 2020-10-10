@@ -1,6 +1,5 @@
 package com.example.podcastapp.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.podcastapp.R
@@ -8,6 +7,7 @@ import com.example.podcastapp.fragments.DownloadFragment
 import com.example.podcastapp.fragments.HomeFragment
 import com.example.podcastapp.fragments.ProfileFragment
 import com.example.podcastapp.fragments.SearchFragment
+import com.example.shared.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {

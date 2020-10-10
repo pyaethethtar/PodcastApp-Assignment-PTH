@@ -17,7 +17,7 @@
         android:id="@+id/tvCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Art A Design"
+        android:text="@string/category_art_design"
         android:textAllCaps="true"
         android:background="@drawable/rc_yellow_bg"
         android:textColor="@color/textcolorSecondary"

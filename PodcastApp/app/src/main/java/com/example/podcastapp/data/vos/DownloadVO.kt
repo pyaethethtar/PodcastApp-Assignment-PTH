@@ -3,7 +3,9 @@ package com.example.podcastapp.data.vos
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.google.firebase.database.IgnoreExtraProperties
 
+@IgnoreExtraProperties
 @Entity(tableName = "downloads")
 data class DownloadVO (
 

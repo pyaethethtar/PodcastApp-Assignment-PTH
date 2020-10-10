@@ -4,9 +4,7 @@ import android.view.View
 import com.bumptech.glide.Glide
 import com.example.podcastapp.data.vos.PodcastVO
 import com.example.podcastapp.delegates.DownloadDelegate
-import kotlinx.android.synthetic.main.item_podcast.view.*
-import kotlinx.android.synthetic.main.item_podcast.view.ivPodcast
-import kotlinx.android.synthetic.main.item_podcast.view.tvPodcastTitle
+import com.example.shared.BaseViewHolder
 import kotlinx.android.synthetic.main.item_podcast_downloaded.view.*
 
 class DownloadedPodcastViewHolder(itemView: View, private val delegate: DownloadDelegate) : BaseViewHolder<PodcastVO>(itemView) {

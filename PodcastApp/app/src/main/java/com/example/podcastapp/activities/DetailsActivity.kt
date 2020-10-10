@@ -20,7 +20,6 @@ import kotlinx.android.synthetic.main.activity_details.*
 
 class DetailsActivity() : BaseActivity(), DetailsView {
 
-   // private lateinit var mPlayerViewpod: SmallPlayerViewpod
     lateinit var mPresenter : DetailsPresenter
     private var podcastId : String = "4d82e50314174754a3b603912448e812"
     private lateinit var player : SimpleExoPlayer

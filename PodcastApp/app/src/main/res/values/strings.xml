@@ -14,5 +14,7 @@
     <string name="btn_reload">Reload</string>
     <string name="tv_details_description">Take your carrer to the next level by showing your prospective clients just how awesome you ar Take your carrer to the next level by showing your prospective clients just how awesome you ar Take your carrer to the next level by showing your prospective clients just how awesome you ar Take your carrer to the next level by showing your prospective clients just how awesome you ar</string>
     <string name="media_url_mp3">https://storage.googleapis.com/exoplayer-test-media-0/Jazz_In_Paris.mp3</string>
-    <string name="hello">hello</string>
+    <string name="img_podcast">https://lloydslist.maritimeintelligence.informa.com/-/media/lloyds-list/images/podcast/podcasthero2.png</string>
+    <string name="category_art_design"><![CDATA[Art & Design]]></string>
+
 </resources>

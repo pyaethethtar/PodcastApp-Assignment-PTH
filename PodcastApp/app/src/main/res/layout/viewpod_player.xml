@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
+
     <com.google.android.exoplayer2.ui.PlayerView
         android:id="@+id/playerView"
         android:layout_width="match_parent"
@@ -35,5 +36,7 @@
             android:layout_marginTop="@dimen/margin_medium"
             android:layout_below="@id/playerView"
             />
+
+
 
 </com.example.podcastapp.views.viewpods.PlayerViewpod>

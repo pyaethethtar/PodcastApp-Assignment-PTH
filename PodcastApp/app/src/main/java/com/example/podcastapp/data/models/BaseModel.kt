@@ -12,26 +12,26 @@ import java.util.concurrent.TimeUnit
 
 abstract class BaseModel {
 
-    protected var mPodcastApi : PodcastAPI
+    //protected var mPodcastApi : PodcastAPI
     protected lateinit var mTheDB : PodcastDB
-    var baseUrl = BASE_URL
+//    var baseUrl = BASE_URL
 
-    init {
-        val mOkHttpClient= OkHttpClient.Builder()
-            .connectTimeout(15, TimeUnit.SECONDS)
-            .readTimeout(15, TimeUnit.SECONDS)
-            .writeTimeout(15, TimeUnit.SECONDS)
-            .build()
-
-        val retrofit= Retrofit.Builder()
-            .baseUrl(baseUrl)
-            .client(mOkHttpClient)
-            .addConverterFactory(GsonConverterFactory.create())
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .build()
-
-        mPodcastApi = retrofit.create(PodcastAPI::class.java)
-    }
+//    init {
+//        val mOkHttpClient= OkHttpClient.Builder()
+//            .connectTimeout(15, TimeUnit.SECONDS)
+//            .readTimeout(15, TimeUnit.SECONDS)
+//            .writeTimeout(15, TimeUnit.SECONDS)
+//            .build()
+//
+//        val retrofit= Retrofit.Builder()
+//            .baseUrl(baseUrl)
+//            .client(mOkHttpClient)
+//            .addConverterFactory(GsonConverterFactory.create())
+//            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+//            .build()
+//
+//        mPodcastApi = retrofit.create(PodcastAPI::class.java)
+//    }
 
     fun initDatabase(context: Context) {
         mTheDB = PodcastDB.getDBInstance(context)

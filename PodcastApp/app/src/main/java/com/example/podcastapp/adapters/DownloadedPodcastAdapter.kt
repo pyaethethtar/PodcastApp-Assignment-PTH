@@ -5,9 +5,9 @@ import android.view.ViewGroup
 import com.example.podcastapp.R
 import com.example.podcastapp.data.vos.PodcastVO
 import com.example.podcastapp.delegates.DownloadDelegate
-import com.example.podcastapp.views.viewholders.BaseViewHolder
+import com.example.shared.BaseViewHolder
 import com.example.podcastapp.views.viewholders.DownloadedPodcastViewHolder
-import com.example.podcastapp.views.viewholders.PodcastViewHolder
+import com.example.shared.BaseAdapter
 
 class DownloadedPodcastAdapter(private val delegate: DownloadDelegate): BaseAdapter<BaseViewHolder<PodcastVO>, PodcastVO>() {
 

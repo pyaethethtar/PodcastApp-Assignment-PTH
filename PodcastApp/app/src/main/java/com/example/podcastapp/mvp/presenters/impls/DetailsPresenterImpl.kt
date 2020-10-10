@@ -6,6 +6,7 @@ import com.example.podcastapp.data.models.PodcastModel
 import com.example.podcastapp.data.models.PodcastModelImpl
 import com.example.podcastapp.mvp.presenters.DetailsPresenter
 import com.example.podcastapp.mvp.views.DetailsView
+import com.example.shared.AbstractBasePresenter
 
 class DetailsPresenterImpl: DetailsPresenter, AbstractBasePresenter<DetailsView>() {
 

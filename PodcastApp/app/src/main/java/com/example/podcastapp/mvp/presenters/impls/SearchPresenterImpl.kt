@@ -7,6 +7,7 @@ import com.example.podcastapp.data.models.PodcastModel
 import com.example.podcastapp.data.models.PodcastModelImpl
 import com.example.podcastapp.mvp.presenters.SearchPresenter
 import com.example.podcastapp.mvp.views.SearchView
+import com.example.shared.AbstractBasePresenter
 
 class SearchPresenterImpl : SearchPresenter, AbstractBasePresenter<SearchView>() {
 

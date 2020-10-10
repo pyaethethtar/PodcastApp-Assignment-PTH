@@ -1,6 +1,5 @@
 package com.example.podcastapp.mvp.presenters.impls
 
-import android.util.Log
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import com.example.podcastapp.data.models.PodcastModel
@@ -8,6 +7,7 @@ import com.example.podcastapp.data.models.PodcastModelImpl
 import com.example.podcastapp.data.vos.PodcastVO
 import com.example.podcastapp.mvp.presenters.DownloadPresenter
 import com.example.podcastapp.mvp.views.DownloadView
+import com.example.shared.AbstractBasePresenter
 
 class DownloadPresenterImpl : AbstractBasePresenter<DownloadView>(), DownloadPresenter{
 

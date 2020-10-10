@@ -80,6 +80,7 @@ class HomeFragment : Fragment() , MainView{
 
     }
 
+
     private fun setUpPresenter() {
         mPresenter = ViewModelProviders.of(this).get(MainPresenterImpl::class.java)
         mPresenter.initPresenter(this)
@@ -108,6 +109,7 @@ class HomeFragment : Fragment() , MainView{
             download(podcast.audio)
         }
     }
+
 
     private fun initBroadCastReceiver(){
         context?.registerReceiver(br, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
@@ -155,10 +157,7 @@ class HomeFragment : Fragment() , MainView{
     }
 
 
-    override fun onStart() {
-        super.onStart()
-        //mPlayerViewpod.initializePlayer()
-    }
+
 
 
     override fun onStop() {

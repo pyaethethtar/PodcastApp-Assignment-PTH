@@ -2,15 +2,10 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
 
 android {
-//    compileOptions {
-//        sourceCompatibility = JavaVersion.VERSION_1_8
-//        targetCompatibility = JavaVersion.VERSION_1_8
-//    }
-//    kotlinOptions {
-//        jvmTarget = JavaVersion.VERSION_1_8
-//    }
+
     compileSdkVersion 29
 
     defaultConfig {
@@ -46,7 +41,7 @@ android {
 }
 
 dependencies {
-    //implementation project(":shared")
+    implementation project(":shared")
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
@@ -65,12 +60,16 @@ dependencies {
     implementation rootProject.ext.libraries.liveData
     implementation rootProject.ext.libraries.lifecycleExtension
     kapt rootProject.ext.libraries.lifecycleCompiler
+    implementation rootProject.ext.libraries.swipeRefresh
     implementation rootProject.ext.libraries.rxKotlin
     implementation rootProject.ext.libraries.rxAndroid
     implementation rootProject.ext.libraries.roomRuntime
     kapt rootProject.ext.libraries.roomCompiler
 
-    implementation 'com.google.android.exoplayer:exoplayer:2.10.4'
+    implementation rootProject.ext.libraries.exoPlayer
+    implementation rootProject.ext.libraries.firebase
+    implementation rootProject.ext.libraries.realtimeDatabase
+    implementation rootProject.ext.libraries.cloudFirestore
 
 
     testImplementation rootProject.ext.libraries.junit

@@ -23,13 +23,20 @@
         android:layout_alignTop="@id/lblUpNext"
         android:layout_marginEnd="@dimen/margin_medium_2"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvUpNextList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:listitem="@layout/item_podcast"
-        android:layout_below="@id/lblUpNext"
-        android:layout_alignStart="@id/lblUpNext"
-        android:layout_alignEnd="@id/btnUpNext" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvUpNextList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_podcast"
+            android:layout_below="@id/lblUpNext"
+            android:layout_alignStart="@id/lblUpNext"
+            android:layout_alignEnd="@id/btnUpNext" />
+
+
+
+
+
+
 
 </com.example.podcastapp.views.viewpods.PodcastListViewpod>

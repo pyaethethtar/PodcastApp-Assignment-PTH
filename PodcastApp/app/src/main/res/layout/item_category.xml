@@ -1,29 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="@dimen/width_category"
+    android:layout_height="@dimen/height_category"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginLeft="@dimen/margin_medium">
 
     <com.example.podcastapp.views.components.RoundedCornerImageView
         android:id="@+id/ivCategory"
-        android:layout_width="@dimen/width_category"
-        android:layout_height="@dimen/height_category"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:src="@drawable/placeholder"
         android:scaleType="fitXY"
         app:cornerRadius="@dimen/margin_large"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvCategoryName"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Fashion"
         android:textSize="@dimen/text_heading_1x"
         android:textColor="@color/textcolorPrimary"
         android:textAllCaps="true"
         android:textStyle="bold"
+        android:textAlignment="center"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/margin_large"
+        android:layout_margin="@dimen/margin_large"
+        android:padding="@dimen/margin_small"
         />
 
 </FrameLayout>

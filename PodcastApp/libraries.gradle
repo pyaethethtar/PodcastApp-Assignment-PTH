@@ -16,7 +16,11 @@ ext{
     junitVersion = "4.12"
     androidJunitVersion = "1.1.1"
     espressoVersion = "3.2.0"
-    exoPlayerVersion = "2.11.5"
+    exoPlayerVersion = "2.10.4"
+    swipeRefreshVersion = "1.1.0"
+    firebaseVersion = "17.5.0"
+    realtimeDatabaseVersion = "19.4.0"
+    cloudFirestoreVersion = "21.6.0"
 
 
     libraries = [
@@ -34,6 +38,7 @@ ext{
         liveData : "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion",
         lifecycleExtension : "android.arch.lifecycle:extensions:$lifecycleVersion",
         lifecycleCompiler : "android.arch.lifecycle:compiler:$lifecycleVersion",
+        swipeRefresh : "androidx.swiperefreshlayout:swiperefreshlayout:$swipeRefreshVersion",
         rxKotlin : "com.github.ReactiveX:RxKotlin:2.x-SNAPSHOT",
         rxAndroid : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
         roomRuntime : "androidx.room:room-runtime:$roomVersion",
@@ -42,9 +47,10 @@ ext{
         junit : "junit:junit:$junitVersion",
         androidJunit : "androidx.test.ext:junit:$androidJunitVersion",
         espresso : "androidx.test.espresso:espresso-core:$espressoVersion",
-        exoPlayerCore : "com.google.android.exoplayer:exoplayer-core:$exoPlayerVersion",
-        exoPlayerDash : "com.google.android.exoplayer:exoplayer-dash:$exoPlayerVersion",
-        exoPlayerUi : "com.google.android.exoplayer:exoplayer-ui:$exoPlayerVersion"
+        exoPlayer : "com.google.android.exoplayer:exoplayer:$exoPlayerVersion",
+        firebase : "com.google.firebase:firebase-analytics:$firebaseVersion",
+        realtimeDatabase : "com.google.firebase:firebase-database-ktx:$realtimeDatabaseVersion",
+        cloudFirestore : "com.google.firebase:firebase-firestore-ktx:$cloudFirestoreVersion"
     ]
 
 }

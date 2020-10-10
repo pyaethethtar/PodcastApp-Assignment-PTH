@@ -16,7 +16,7 @@ class MainPresenterImpl : AbstractBasePresenter<MainView>(),
 
     override fun onUiReady(lifecycleOwner: LifecycleOwner) {
 
-        loadPodcastsFromApiAndSaveToDatabase()
+        //loadPodcastsFromApiAndSaveToDatabase()
         requestRandomPodcast(lifecycleOwner)
         requestUpNextPodcasts(lifecycleOwner)
     }
@@ -56,7 +56,7 @@ class MainPresenterImpl : AbstractBasePresenter<MainView>(),
             onError = {Log.e("error", "Podcast Error")}
         ).observe(lifecycleOwner, Observer {
             if (it!=null){
-                mView?.displayPlayer(it)
+                mView?.displayPlayer(it.data)
             }
         })
     }

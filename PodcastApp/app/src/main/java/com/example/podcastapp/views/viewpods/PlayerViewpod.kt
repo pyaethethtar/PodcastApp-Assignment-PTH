@@ -43,15 +43,6 @@ class PlayerViewpod @JvmOverloads constructor(
         tvPlayerTitle.text = podcast.title
         tvPlayerDescription.text = podcast.description
 
-//        var hour = podcast.audio_length?.div(60)
-//        var min = podcast.audio_length?.rem(60)
-//        if(hour<1){
-//            tvPlayerTime.text = min.toString()+"min"
-//        }
-//        else{
-//            tvPlayerTime.text = hour.toString()+"h "+min.toString()+"min left"
-//        }
-        Log.e("PodcastResult", podcast.audio)
         initializePlayer(podcast.audio)
     }
 

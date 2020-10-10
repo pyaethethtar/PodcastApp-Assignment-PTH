@@ -1,7 +1,6 @@
-package com.example.podcastapp.adapters
+package com.example.shared
 
 import androidx.recyclerview.widget.RecyclerView
-import com.example.podcastapp.views.viewholders.BaseViewHolder
 
 abstract class BaseAdapter<T: BaseViewHolder<W>, W> : RecyclerView.Adapter<T>() {
 

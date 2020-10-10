@@ -1,8 +1,6 @@
-package com.example.podcastapp.mvp.presenters.impls
+package com.example.shared
 
 import androidx.lifecycle.ViewModel
-import com.example.podcastapp.mvp.presenters.BasePresenter
-import com.example.podcastapp.mvp.views.BaseView
 
 abstract class AbstractBasePresenter<T : BaseView> : BasePresenter<T>, ViewModel() {
 

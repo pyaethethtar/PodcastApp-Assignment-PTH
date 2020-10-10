@@ -34,7 +34,7 @@
                     android:id="@+id/tvToolbarCategory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Art A Design"
+                    android:text="@string/category_art_design"
                     android:textAllCaps="true"
                     android:background="@drawable/rc_yellow_bg"
                     android:textColor="@color/textcolorSecondary"
@@ -51,12 +51,15 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
+
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/maincontent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-        <RelativeLayout
+
+    <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="@dimen/margin_large">
@@ -153,6 +156,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_small_player"
             android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true"
             android:layout_margin="@dimen/margin_small"
             android:background="@color/colorWhite"
             app:fastforward_increment="30000"
@@ -160,8 +164,6 @@
             app:show_timeout="0"
             app:hide_on_touch="false"
             app:controller_layout_id="@layout/custom_player_small"/>
-
-
 
 
 
