@@ -11,27 +11,13 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-object CloudFirestore : FirebaseAPI {
+object CloudFirestoreDataAgentImpl : FirebaseAPI {
 
     private val db = Firebase.firestore
+    var i : Int = 0
 
     override fun getRandomPodcast(onSuccess: (PodcastVO?) -> Unit, onFailure: (String) -> Unit) {
-        db.collection("latest_episodes").addSnapshotListener { value, error ->
-            error?.let {
-                onFailure(it.message ?: "Please check your connection")
-            } ?: run {
-                val result = value?.documents?.first()?.data
-                var podcastVO = PodcastVO()
-                podcastVO.id = result?.get("id") as String
-                podcastVO.title = result?.get("title") as String
-                podcastVO.description = result["description"] as String
-                podcastVO.image = result?.get("image") as String
-                podcastVO.audio = result["audio"] as String
-                podcastVO.audio_length = (result["audio_length_sec"] as Long).toInt()
 
-                onSuccess(podcastVO)
-            }
-        }
     }
 
     override fun getUpNextPodcastList(
@@ -44,17 +30,8 @@ object CloudFirestore : FirebaseAPI {
             } ?: run {
                 var podcastList = arrayListOf<ItemVO>()
                 val results = value?.documents ?: arrayListOf()
-                var i : Int = 0
                 for (document in results){
-                    val data = document.data
-                    var podcastVO = PodcastVO()
-                    podcastVO.id = data?.get("id") as String
-                    podcastVO.title = data?.get("title") as String
-                    podcastVO.description = data["description"] as String
-                    podcastVO.image = data?.get("image") as String
-                    podcastVO.audio = data["audio"] as String
-                    podcastVO.audio_length = (data["audio_length_sec"] as Long).toInt()
-                    var item = ItemVO(i, podcastVO)
+                    val item = typecastPodcastVO(document.data)
                     podcastList.add(item)
                     i++
                 }
@@ -71,17 +48,31 @@ object CloudFirestore : FirebaseAPI {
                 var genresList = arrayListOf<GenresVO>()
                 val results = value?.documents ?: arrayListOf()
                 for (document in results){
-                    val data = document.data
-                    var genresVO = GenresVO()
-                    genresVO.genresId = (data?.get("id") as Long).toInt()
-                    genresVO.name = data["name"] as String
-                    genresVO.parentId = (data?.get("parent_id") as Long).toInt()
-
+                    val genresVO = typecastGenresVO(document.data)
                     genresList.add(genresVO)
                 }
                 onSuccess(genresList)
             }
         }
+    }
+
+    private fun typecastPodcastVO(data : MutableMap<String, Any>?) : ItemVO{
+        var podcastVO = PodcastVO()
+        podcastVO.id = data?.get("id") as String
+        podcastVO.title = data?.get("title") as String
+        podcastVO.description = data["description"] as String
+        podcastVO.image = data?.get("image") as String
+        podcastVO.audio = data["audio"] as String
+        podcastVO.audio_length = (data["audio_length_sec"] as Long).toInt()
+        return ItemVO(i, podcastVO)
+    }
+
+    private fun typecastGenresVO(data : MutableMap<String, Any>?) : GenresVO{
+        var genresVO = GenresVO()
+        genresVO.genresId = (data?.get("id") as Long).toInt()
+        genresVO.name = data["name"] as String
+        genresVO.parentId = (data?.get("parent_id") as Long).toInt()
+        return genresVO
     }
 
 

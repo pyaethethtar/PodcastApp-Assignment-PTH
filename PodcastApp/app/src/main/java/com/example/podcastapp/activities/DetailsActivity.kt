@@ -11,6 +11,7 @@ import com.example.podcastapp.data.vos.PodcastVO
 import com.example.podcastapp.mvp.presenters.DetailsPresenter
 import com.example.podcastapp.mvp.presenters.impls.DetailsPresenterImpl
 import com.example.podcastapp.mvp.views.DetailsView
+import com.example.shared.BaseActivity
 import com.google.android.exoplayer2.ExoPlayerFactory
 import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.source.ProgressiveMediaSource

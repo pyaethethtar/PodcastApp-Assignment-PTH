@@ -8,6 +8,7 @@ import com.example.podcastapp.data.models.PodcastModelImpl
 import com.example.podcastapp.data.vos.PodcastVO
 import com.example.podcastapp.mvp.presenters.MainPresenter
 import com.example.podcastapp.mvp.views.MainView
+import com.example.shared.AbstractBasePresenter
 
 class MainPresenterImpl : AbstractBasePresenter<MainView>(),
     MainPresenter {
